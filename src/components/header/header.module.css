@@ -1,0 +1,16 @@
+
+
+.header_container{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.button {
+    border: none;
+    text-decoration: none;
+ }
+
+ .span {
+    color: crimson;
+ }
