@@ -4,7 +4,7 @@ function Header() {
   return (
     <>
     <div className={styles.header_container}>
-    <p>
+    <p className={styles.notifications}>
         Notifications <span className={styles.span}>3</span>
       </p>
       <button className={styles.button}>Mark all as read</button>

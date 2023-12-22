@@ -3,14 +3,25 @@
 .header_container{
     display: flex;
     justify-content: space-between;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
 }
 
 .button {
     border: none;
     text-decoration: none;
+    background-color: white;
+    color: hsl(219, 14%, 63%);
  }
 
+.notifications {
+    color: hsl(224, 21%, 14%) ;
+    font-weight: 800;
+    font-size: 1.2rem;
+}
+
  .span {
-    color: crimson;
+    background-color:hsl(219, 85%, 26%);
+    color: white;
+    padding: 2px 10px;
+    border-radius: 5px;
  }
