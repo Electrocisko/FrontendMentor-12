@@ -1,48 +1,87 @@
 /* eslint-disable react/no-unescaped-entities */
-import './App.css';
-import Header from './components/header/Header';
+import "./App.css";
+import Header from "./components/header/Header";
+import Post from "./components/post/Post";
+
+const posts = [
+  {
+    id: 1,
+    name: "Mark Webber ",
+    info: "reacted to your recent post ",
+    post: "My first tournament today!",
+    time: "1m ago",
+    image: "./images/avatar-mark-webber.webp",
+    readed: false
+  },
+  {
+    id: 2,
+    name: "Angela Gray ",
+    info: "followed you ",
+    time: "5m ago",
+    image: "./images/avatar-angela-gray.webp",
+    readed: false
+  },
+  {
+    id: 3,
+    name: "Jacob Thompson ",
+    info: "has joined your group Chess Club",
+    time: "1 day ago",
+    image: "./images/avatar-jacob-thompson.webp",
+    readed: false
+  },
+  {
+    id: 4,
+    name: "Rizky Hasanuddin ",
+    info: "sent you a private message",
+    message:
+      "Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and I'm already having lots of fun and improving my game.",
+    time: "5 days ago",
+    image: "./images/avatar-rizky-hasanuddin.webp",
+    readed: true
+  },
+  {
+    id: 5,
+    name: "Kimberly Smith ",
+    info: "commented on your picture",
+    time: "1 week ago",
+    image: "./images/avatar-kimberly-smith.webp",
+    readed: true
+  },
+  {
+    id: 6,
+    name: "Nathan Peterson ",
+    info: "reacted to your recent post 5 end-game strategies to increase your win rate",
+    time: " 2 weeks ago",
+    image: "./images/avatar-nathan-peterson.webp",
+    readed: true
+  },
+  {
+    id: 7,
+    name: "Anna Kim ",
+    info: "left the group Chess Club",
+    time: "2 weeks ago",
+    image: "./images/avatar-anna-kim.webp",
+    readed: true
+  },
+];
 
 function App() {
   return (
     <>
-    <Header/>
-    <div>
+      <Header />
+      {posts.map((post) => (
+        <Post key={post.id} data={post} />
+      ))}
 
-    Mark Webber reacted to your recent post My first tournament today!
-    1m ago
-
-    Angela Gray followed you
-    5m ago
-
-    Jacob Thompson has joined your group Chess Club
-    1 day ago
-
-    Rizky Hasanuddin sent you a private message
-    5 days ago
-    Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and 
-
-    I'm already having lots of fun and improving my game.
-
-    Kimberly Smith commented on your picture
-    1 week ago
-
-    Nathan Peterson reacted to your recent post 5 end-game strategies to increase your win rate
-    2 weeks ago
-
-    Anna Kim left the group Chess Club
-    2 weeks ago
-
-    </div>
-
-
-
- 
-<div className="attribution">
-  Challenge by <a href="https://www.frontendmentor.io?ref=challenge" >Frontend Mentor</a>. 
-  Coded by <a href="#">Your Name Here</a>.
-</div>
+      <div className="attribution">
+        Challenge by{" "}
+        <a href="https://www.frontendmentor.io?ref=challenge">
+          Frontend Mentor
+        </a>
+        . Coded by <a href="#">Your Name Here</a>.
+      </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
