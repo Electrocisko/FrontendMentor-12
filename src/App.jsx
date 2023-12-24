@@ -1,9 +1,10 @@
 /* eslint-disable react/no-unescaped-entities */
+import { useState } from "react";
 import "./App.css";
 import Header from "./components/header/Header";
 import Post from "./components/post/Post";
 
-const posts = [
+const postsList = [
   {
     id: 1,
     name: "Mark Webber ",
@@ -11,7 +12,7 @@ const posts = [
     post: "My first tournament today!",
     time: "1m ago",
     image: "./images/avatar-mark-webber.webp",
-    readed: false
+    readed: false,
   },
   {
     id: 2,
@@ -19,7 +20,7 @@ const posts = [
     info: "followed you ",
     time: "5m ago",
     image: "./images/avatar-angela-gray.webp",
-    readed: false
+    readed: false,
   },
   {
     id: 3,
@@ -27,7 +28,7 @@ const posts = [
     info: "has joined your group Chess Club",
     time: "1 day ago",
     image: "./images/avatar-jacob-thompson.webp",
-    readed: false
+    readed: false,
   },
   {
     id: 4,
@@ -37,7 +38,7 @@ const posts = [
       "Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and I'm already having lots of fun and improving my game.",
     time: "5 days ago",
     image: "./images/avatar-rizky-hasanuddin.webp",
-    readed: true
+    readed: true,
   },
   {
     id: 5,
@@ -45,8 +46,8 @@ const posts = [
     info: "commented on your picture",
     time: "1 week ago",
     image: "./images/avatar-kimberly-smith.webp",
-    picture:  "./images/image-chess.webp",
-    readed: true
+    picture: "./images/image-chess.webp",
+    readed: true,
   },
   {
     id: 6,
@@ -54,7 +55,7 @@ const posts = [
     info: "reacted to your recent post 5 end-game strategies to increase your win rate",
     time: " 2 weeks ago",
     image: "./images/avatar-nathan-peterson.webp",
-    readed: true
+    readed: true,
   },
   {
     id: 7,
@@ -62,14 +63,22 @@ const posts = [
     info: "left the group Chess Club",
     time: "2 weeks ago",
     image: "./images/avatar-anna-kim.webp",
-    readed: true
+    readed: true,
   },
 ];
 
 function App() {
+  const [posts, setPosts] = useState(postsList);
+  function markedAllReading() {
+    const aux = posts.map((post) => {
+      return { ...post, readed: true };
+    });
+    setPosts(aux);
+  }
+
   return (
     <>
-      <Header />
+      <Header handler={markedAllReading} />
       {posts.map((post) => (
         <Post key={post.id} data={post} />
       ))}
