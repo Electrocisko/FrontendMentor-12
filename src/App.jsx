@@ -68,17 +68,29 @@ const postsList = [
 ];
 
 function App() {
+
   const [posts, setPosts] = useState(postsList);
+  const [notif, setNotif] = useState(countNewNotifications())
+
   function markedAllReading() {
     const aux = posts.map((post) => {
       return { ...post, readed: true };
     });
     setPosts(aux);
+    setNotif(0);
+  }
+
+  function countNewNotifications () {
+    let count = 0;
+    posts.forEach(post => {
+      !post.readed && count++
+    });
+   return count;
   }
 
   return (
     <>
-      <Header handler={markedAllReading} />
+      <Header handler={markedAllReading} newNotif={notif} />
       {posts.map((post) => (
         <Post key={post.id} data={post} />
       ))}
