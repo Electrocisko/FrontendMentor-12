@@ -45,6 +45,7 @@ const posts = [
     info: "commented on your picture",
     time: "1 week ago",
     image: "./images/avatar-kimberly-smith.webp",
+    picture:  "./images/image-chess.webp",
     readed: true
   },
   {
@@ -78,7 +79,7 @@ function App() {
         <a href="https://www.frontendmentor.io?ref=challenge">
           Frontend Mentor
         </a>
-        . Coded by <a href="#">Your Name Here</a>.
+        . Coded by <a href="#">F. J. Zuidwijk</a>.
       </div>
     </>
   );

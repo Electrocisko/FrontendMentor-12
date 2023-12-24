@@ -8,6 +8,7 @@
 
 .text_container {
     font-size: 13px;
+    display: flex;
 }
 
 .name {
@@ -27,4 +28,13 @@
 
 .circle {   
     height: 10px;
+}
+
+.time {
+    margin: 5px 0px 10px 0px;
+}
+
+.picture_post {
+    height: 40px;
+    display: inline-block;
 }
