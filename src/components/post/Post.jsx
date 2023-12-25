@@ -3,9 +3,13 @@ import styles from "./post.module.css";
 import Message from "../message/message";
 
 function Post({ data }) {
+
+  let classContainer;
+  data.readed ? classContainer=styles.container : classContainer=styles.container_blue;
+
   return (
     <>
-      <div className={styles.container}>
+      <div className={classContainer}>
         <img src={data.image} alt="" className={styles.avatar} />
         <div className={styles.text_container}>
           <div>

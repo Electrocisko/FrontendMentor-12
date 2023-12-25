@@ -2,6 +2,13 @@
 .container {
     display: flex;
     margin-bottom: 20px;
+    padding: 10px;
+}
+
+
+.container_blue {
+    display: flex;
+    margin-bottom: 20px;
     background-color:  hsl(210, 60%, 98%);
     padding: 10px;
 }
@@ -28,6 +35,7 @@
 
 .circle {   
     height: 10px;
+    margin-left: 3px;
 }
 
 .time {
