@@ -22,9 +22,28 @@
 }
 
 body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 30px;
   color: var(--color-Grayish-blue);
+  background-color: hsl(210, 60%, 98%) ;
 }
 
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
+
+/* -----Desktop Design ----- */
+
+@media (min-width: 376px) {
+
+.container {
+ width: 580px;
+ box-shadow: 5px 5px 20px 10px  hsl(211, 68%, 94%);
+ border-radius: 20px;
+ padding: 25px;
+}
+
+
+
+}

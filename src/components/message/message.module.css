@@ -3,4 +3,9 @@
     border: solid 0.5px  hsl(205, 33%, 90%) ;
     padding: 10px 25px 10px 8px;
     border-radius: 5px;
+    cursor: pointer;
+}
+
+.message:hover {
+ background-color: hsl(211, 68%, 94%);
 }

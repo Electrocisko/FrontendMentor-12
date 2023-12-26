@@ -34,7 +34,7 @@ function Post({ data }) {
               </span>
             </p>
             <p className={styles.time}>{data.time}</p>
-            {data.message && <Message message={data.message} />}
+            {data.message && <a href="#" className={styles.message}> <Message message={data.message} /></a>  }
           </div>
           {data.picture && (
             <img

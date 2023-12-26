@@ -91,8 +91,8 @@ function App() {
   }
 
   return (
-    <>
-      <Header handler={markedAllReading} newNotif={notif} />
+    <div className="container">
+    <Header handler={markedAllReading} newNotif={notif} />
       {posts.map((post) => (
         <Post key={post.id} data={post} />
       ))}
@@ -104,7 +104,7 @@ function App() {
         </a>
         . Coded by <a href="#">F. J. Zuidwijk</a>.
       </div>
-    </>
+    </div>
   );
 }
 
