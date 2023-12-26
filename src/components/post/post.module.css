@@ -21,8 +21,9 @@ a {
 .container_blue {
     display: flex;
     margin-bottom: 20px;
-    background-color:  hsl(210, 60%, 98%);
+    background-color:  hsl(227, 60%, 97%);
     padding: 10px;
+    border-radius: 10px;
 }
 
 .text_container {
