@@ -5,6 +5,14 @@
     padding: 10px;
 }
 
+a {
+    text-decoration: none;
+}
+
+.text_container a:hover {
+ color: hsl(219, 85%, 26%);
+}
+
 
 .container_blue {
     display: flex;

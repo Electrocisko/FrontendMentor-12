@@ -3,9 +3,10 @@ import styles from "./post.module.css";
 import Message from "../message/message";
 
 function Post({ data }) {
-
   let classContainer;
-  data.readed ? classContainer=styles.container : classContainer=styles.container_blue;
+  data.readed
+    ? (classContainer = styles.container)
+    : (classContainer = styles.container_blue);
 
   return (
     <>
@@ -14,9 +15,14 @@ function Post({ data }) {
         <div className={styles.text_container}>
           <div>
             <p>
-              <span className={styles.name}>{data.name}</span>
+              <a
+                href="https://www.frontendmentor.io/home"
+                className={styles.name}
+              >
+                {data.name}
+              </a>
               {data.info}
-              <span className={styles.text_post}>{data.post && data.post}</span>
+              <a  href="https://www.frontendmentor.io/home" className={styles.text_post}>{data.post}</a>
               <span>
                 {!data.readed && (
                   <img
@@ -30,7 +36,13 @@ function Post({ data }) {
             <p className={styles.time}>{data.time}</p>
             {data.message && <Message message={data.message} />}
           </div>
-          {data.picture && <img className={styles.picture_post} src={data.picture} alt="image" />}
+          {data.picture && (
+            <img
+              className={styles.picture_post}
+              src={data.picture}
+              alt="image"
+            />
+          )}
         </div>
       </div>
     </>
