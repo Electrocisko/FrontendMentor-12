@@ -16,13 +16,13 @@ function Post({ data }) {
           <div>
             <p>
               <a
-                href="https://www.frontendmentor.io/home"
+                href="#"
                 className={styles.name}
               >
                 {data.name}
               </a>
-              {data.info}
-              <a  href="https://www.frontendmentor.io/home" className={styles.text_post}>{data.post}</a>
+              {data.info} {data.group && <a className={styles.group} href="#">{data.group}</a>}
+              <a  href="#" className={styles.text_post}>{data.post}</a>
               <span>
                 {!data.readed && (
                   <img

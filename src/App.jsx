@@ -25,7 +25,8 @@ const postsList = [
   {
     id: 3,
     name: "Jacob Thompson ",
-    info: "has joined your group Chess Club",
+    info: "has joined your group ",
+    group: "Chess Club",
     time: "1 day ago",
     image: "./images/avatar-jacob-thompson.webp",
     readed: false,
@@ -60,7 +61,8 @@ const postsList = [
   {
     id: 7,
     name: "Anna Kim ",
-    info: "left the group Chess Club",
+    info: "left the group ",
+    group: "Chess Group",
     time: "2 weeks ago",
     image: "./images/avatar-anna-kim.webp",
     readed: true,
