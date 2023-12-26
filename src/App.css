@@ -39,7 +39,7 @@ body {
 
 .container {
  width: 580px;
- box-shadow: 5px 5px 20px 10px  hsl(210, 60%, 98%);
+ box-shadow: 5px 5px 20px 10px  hsl(200, 25%, 95%);
  border-radius: 20px;
  padding: 25px;
 }
